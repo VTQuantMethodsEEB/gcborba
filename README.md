@@ -11,3 +11,11 @@ DATA: catch_data.csv
       hydro.csv
 
 Here, I explored how to use R and did some basic calculations.
+
+##WEEK 2##
+CODE : assignment2.R
+
+DATA: catch_data.csv
+      hydro.csv
+
+
