@@ -62,9 +62,9 @@ catdat_with_sample_size = catdat %>%
 #this adds a column to the dataframe
 catdat_with_sample_size
 
-##we could have also just added this column to batdat
+##we could have also just added this column to catdat
 cattdat = catdat %>% 
-  #create a new dataframe  called batdat_with_sample_size
+  #create a new dataframe  
   group_by(river,spp,date) %>% 
   #you can group_by multiple things
   mutate(sample.size=length(date))
