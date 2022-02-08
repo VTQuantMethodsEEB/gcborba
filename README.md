@@ -13,7 +13,6 @@ DATA: catch_data.csv
 
 Here, I explored how to use R and did some basic calculations.
 
-
 ##WEEK 2##
 
 CODE : assignment2.R
@@ -22,5 +21,10 @@ DATA: catch_data.csv
       
 Here, I explore my data by putting it in tidy format. I get for mistakes over my data and fixed it. By using mutate, I rename one of my rivers variable level. I ran summarise and mutate function to see output difference between them. 
 
+##WEEK 3##
 
+CODE : Week3_GabrielBorba.R
 
+DATA: catch_data.csv
+      
+Here, I plot some different plots by using ggplot. First, I plotted catch data for each spp between different rivers. I plotted a ggplot for each one of my river sites 
