@@ -7,7 +7,7 @@ Gabriel Borba**
 
 ##WEEK 1###
 
-CODE : assignment1.R
+CODE : Week1_GabrielBorba.R
 DATA: catch_data.csv
       hydro.csv
 
@@ -15,7 +15,7 @@ Here, I explored how to use R and did some basic calculations.
 
 ##WEEK 2##
 
-CODE : assignment2.R
+CODE : Week2_GabrielBorba.R
 
 DATA: catch_data.csv
       
