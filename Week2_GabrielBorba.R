@@ -8,7 +8,7 @@ library(dplyr)
 
 #2. Input your data into R. ####
 #using the catch data - read
-catdat=read.csv("catch_data.csv") 
+catdat=read.csv("catch.csv") 
 
 head(catdat)  
 unique(catdat$spp)
