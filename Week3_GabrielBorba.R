@@ -5,21 +5,19 @@ library(tidyverse)
 library(tidyr)
 library(dplyr)
 
-catdat=read.csv("catch_data.csv") 
+#read my catch data
+catdat=read.csv("catch.csv") 
 head(catdat)
 catdat <- catdat %>% 
   mutate(river = recode(river, "NEGRO" = "neg"))
 catdat$river <- factor(catdat$river)
 
-catdat$lgdL=log10(catdat$catch)
-
+catdat$log=log(catdat$catch)
+catdat$year <- as.numeric(format(as.Date(catdat$date, format="%d/%m/%Y"),"%Y"))
 #Plotting my data with catch for each species between rivers 
-ggplot(data=catdat, aes(x = spp, y = lgdL, color=river))+
+ggplot(data=catdat, aes(x = spp, y = log, color=river))+
   geom_point(size=2)
 
-g1=ggplot(data=batdat,aes(x=species,y=lgdL,color=site))+
-  geom_point(size=2) #this adds points to graph
-g1
 
 #setting my own theme 
 theme_set(theme_bw()+
@@ -37,10 +35,13 @@ theme_set(theme_bw()+
 #creating a plot for each river 
 
 #Purus River 
-pur <- subset(catdat, river == "pur" & year =="1993")
-pur1=ggplot(data=pur,aes(x=spp,y=catch))+
+pur <- subset(catdat, river == "pur" & spp == "all") # points different boats 
+    aggregate(log~spp,data=pur,  mean)
+pur1=ggplot(data=pur,aes(x=as.factor(year),y=log), na.omit=T)+
   geom_point(size=2) #this adds points to graph
 pur1
+str(catdat)
+
 
 
 g1=ggplot(data=catdat,aes(x=spp,y=catch))+
