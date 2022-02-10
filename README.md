@@ -32,6 +32,11 @@ Here, I explore my data by putting it in tidy format. I get for mistakes over my
 
 CODE : Week3_GabrielBorba.R
 
-DATA: catch_data.csv
+DATA: catch.csv
       
-Here, I plot some different plots by using ggplot. First, I plotted catch data for each spp between different rivers. I plotted a ggplot for each one of my river sites 
+Here, I plot some different plots by using ggplot. First, I convert my zero values as NA values. Then, I create a new variable "year" in order to plot against my catch values. 
+I created my own theme_set to visualize my plots. After I created my theme, I plotted catch data for each year and I picked river as a color.
+
+To see differences on catch over the years, I plotted annual catch fish for each river.
+
+
