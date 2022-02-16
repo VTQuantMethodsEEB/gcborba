@@ -12,7 +12,7 @@ success= 0 or 1 (catch or not)
 boat = boat name
 length = boat length 
 
-##WEEK 1###
+## WEEK 1###
 
 CODE : Week1_GabrielBorba.R
 DATA: catch.csv
@@ -20,7 +20,7 @@ DATA: catch.csv
 
 Here, I explored how to use R and did some basic calculations.
 
-##WEEK 2##
+## WEEK 2##
 
 CODE : Week2_GabrielBorba.R
 
@@ -28,7 +28,7 @@ DATA: catch.csv
       
 Here, I explore my data by putting it in tidy format. I get for mistakes over my data and fixed it. By using mutate, I rename one of my rivers variable level. I ran summarise and mutate function to see output difference between them. 
 
-##WEEK 3##
+## WEEK 3##
 
 CODE : Week3_GabrielBorba.R
 
