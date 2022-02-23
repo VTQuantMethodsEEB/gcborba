@@ -7,7 +7,7 @@ library(tidyverse)
 library(reshape2)
 
 #1.
-data <- read.csv("catch_data.csv",h=T) #fish data
+data <- read.csv("catch.csv",h=T) #fish data
 hyd <- read.csv("hydro.csv", h=T)#hydrology data
 head(data)
 head(hyd)

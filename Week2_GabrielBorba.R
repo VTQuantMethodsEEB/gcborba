@@ -8,15 +8,18 @@ library(dplyr)
 
 #2. Input your data into R. ####
 #using the catch data - read
-catdat=read.csv("catch_data.csv") 
+catdat=read.csv("catch.csv") 
 
 head(catdat)  
 unique(catdat$spp)
 hist(catdat$catch)
 
 catdat$lgdL=log10(catdat$catch)#log the catch fish 
-catcounts<-aggregate(catch~spp+river+date,data=catdata, FUN=mean)  #make a df of cat counts
+catcounts<-aggregate(catch~spp+river+date,data=catdat, FUN=mean)  #make a df of cat counts
+#KL: replaced dataframe name here
 
+catcounts
+#KL note: this is a huge dataset!
 
 ##how to use base R's match##
 catloads<-aggregate(lgdL~spp+river+date,data=catdat, FUN=mean)  #make a df of cat loads
