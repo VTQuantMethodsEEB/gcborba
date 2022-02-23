@@ -39,4 +39,19 @@ I created my own theme_set to visualize my plots. After I created my theme, I pl
 
 To see differences on catch over the years, I plotted annual catch fish for each river.
 
+##WEEK 5##
+
+CODE : Week5_GabrielBorba.R
+
+DATA: catch.csv
+
+Here, I used my catch data to formulate two hypothesis:
+
+H1= the mean of catch success are significantly different for boat length
+H2= the mean of catch success are significantly different for catch effort 
+
+First, I get if my variables have a normal distribution by plotting a histogram for each of them. Then, I check if the hypotheses 1 is true or false by running a non-parametric test. 
+
+To check if my H2 is T or F, I ran a permutation test by using the function onyway_test from coin package. 
+
 
