@@ -90,7 +90,7 @@ mad=subset(catdat$catch,catdat$river=="mad")
 
 for (i in 1:1000) {
   catchboot <- sample(c(ama,mad)) ## scramble
-  ## 
+  ## '
   amaboot <- catchboot[1:length(ama)]  #this says assign the first values 
   madboot <- catchboot[(length(ama)+1):length(catchboot)] #assign the rest of the colonies to field
   
@@ -108,3 +108,12 @@ mean(result>=obs)
 #my observed mean difference is very far from my mean difference from permutation test 
 hist(result,col="gray",las=1,main="", xlim= c(-100, 100))
 abline(v=obs,col="red")
+
+#t test for my mean difference values from permutation test 
+t.test(result)
+
+#p>0.05, indicates that my mean differences are not significant 
+
+#no parametric for my observed mean difference between rivers 
+wilcox.test(obs)
+#p>0.05, indicates that my mean differences are not significant 
