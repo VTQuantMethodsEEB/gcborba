@@ -52,6 +52,6 @@ H2= the mean of catch success are significantly different for catch effort
 
 First, I get if my variables have a normal distribution by plotting a histogram for each of them. Then, I check if the hypotheses 1 is true or false by running a non-parametric test. 
 
-To check if my H2 is T or F, I ran a permutation test by using the function onyway_test from coin package. 
+To check if my H2 is T or F, I ran a permutation test by using the function onyway_test from coin package
 
 
