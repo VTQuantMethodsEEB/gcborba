@@ -6,10 +6,15 @@ Gabriel Borba**
   The dataset contains daily landing fisheries from the Amazon River Basin and the hydrological matrix. The data cover from 1993 to 2006 and have information for the main principal tributaries of the Amazon River. Fishing data includes variables such as date, common name species, boat, tributary river, effort, and yield. Hydrological data includes minimum, maximum, duration, and water levels (high and low waters). All hydrological information came from Brazil's National Water Agency (ANA) for the same period used for the fish catch. 
 
 bid = boat id
-pam = boat number 
+
+pam = boat number
+
 gear = gear type
+
 success= 0 or 1 (catch or not)
+
 boat = boat name
+
 length = boat length 
 
 ## WEEK 1###
@@ -45,13 +50,15 @@ CODE : Week5_GabrielBorba.R
 
 DATA: catch.csv
 
-Here, I used my catch data to formulate two hypothesis:
+Here, I used my catch data to formulate two hypotheses:
 
-H1= the mean of catch success are significantly different for boat length
-H2= the mean of catch success are significantly different for catch effort 
+H1= the catch mean is significantly higher in larger boat length than smaller boats.
+H2= the catch mean is significantly different between rivers. 
 
-First, I get if my variables have a normal distribution by plotting a histogram for each of them. Then, I check if the hypotheses 1 is true or false by running a non-parametric test. 
+First, I get if my variables have a normal distribution by plotting a histogram for each of them. Then, I check if the hypothesis H1 is true or false by running a non-parametric test because my variables have a non-normal distribution. 
 
-To check if my H2 is T or F, I ran a permutation test by using the function onyway_test from coin package
+I also ran a permutation test to check if my H1 is T or F by using the function onyway_test from coin package
 
+For my H2, I used a loop for my permutation test. I scramble catch values from Amazon and Madeira river. In the for loop, I store difference in the means between the two rivers. 
 
+After that, I got my observed mean difference and my mean difference from the permutation. By using these means I measured my p-value.   
