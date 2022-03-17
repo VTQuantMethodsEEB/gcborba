@@ -62,3 +62,23 @@ I also ran a permutation test to check if my H1 is T or F by using the function 
 For my H2, I used a loop for my permutation test. I scramble catch values from Amazon and Madeira river. In the for loop, I store difference in the means between the two rivers. 
 
 After that, I got my observed mean difference and my mean difference from the permutation. By using these means I measured my p-value.   
+
+
+## WEEK 6##
+
+## WEEK 7##
+
+CODE : Week7_GabrielBorba.R
+
+DATA: catch.csv
+
+First of all, I build a hypothesis that the catch values is significantly different between boat length. 
+
+To check my hypothesis, I did a simple linear model where catch was my response variable and my boat length was my explanatory variable. 
+
+I did a Shapiro test to check normally from my model but my dataset is too large, so I checked with a sample equals 5000 values. My p-value was <.005 so confirming that my data does not follow a normal distribution. 
+
+After to check normally, I plotted the relationship between catch and length to visualize and confirm the results from the linear model that I did before.
+
+Then, I plotted the relationship in ggplot using stat_smooth (method = "linear")
+
