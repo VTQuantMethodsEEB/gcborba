@@ -65,6 +65,8 @@ After that, I got my observed mean difference and my mean difference from the pe
 
 
 ## WEEK 6##
+No assignment 
+
 
 ## WEEK 7##
 
@@ -82,6 +84,7 @@ After to check normally, I plotted the relationship between catch and length to 
 
 Then, I plotted the relationship in ggplot using stat_smooth (method = "linear")
 
+## WEEK 8##
 
 #1. Make a linear model (with more than one variable) for one of your hypotheses. Articulate which hypothesis you are testing.
 #Consider the length boat in addition to river sites
