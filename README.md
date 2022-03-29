@@ -82,3 +82,33 @@ After to check normally, I plotted the relationship between catch and length to 
 
 Then, I plotted the relationship in ggplot using stat_smooth (method = "linear")
 
+
+#1. Make a linear model (with more than one variable) for one of your hypotheses. Articulate which hypothesis you are testing.
+#Consider the length boat in addition to river sites
+
+
+#H2 = the fish catch is significantly different for boat length and river sites.
+
+#Output model results:
+
+The Amazonas river is set as my intercept. There is a difference on fish catch from Amazonas and Negro river (p < 0.005) and catch also significantly varies over length boat (p < 0.005).
+
+#2. Use an interactive model and an additive model. Explain what hypothesis each of these is testing, and what the R output is telling you about your data.
+
+#H2 = the fish catch depends on length boat and river sites.
+
+I ran an interactive model where my fish catch was set as response variable and boat length and river sites as a explanatory variables. 
+
+mod_inter<-lm(catch~length*river, data=catdat)
+
+Then, I ran allEffects function to check all average values from all my variable levels.
+
+#Output model results:
+The Amazon river boats is my intercept. The output shows that fish catch depends on boat length and river sites, where there is a significantly difference between fish catch from Amazon river comparing to other river sites and this difference is related to boat length. The average values for fish catch are different comparing length boat bins and between rivers. 
+
+#3. Plot your model (e.g. using predict) and overlay the model on top of the underlying data. 
+
+#Plot interpretation
+
+Fish catch from Amazon river tens to be higher than others tributary rivers, the Negro river has the lowest catch and it would be related to physical-chemical characteristics from the water. The Negro River is categorized as a black waters river, which means poor nutrient and highly acidic waters. All the other rivers are white water rivers with nutrient and sediment rich, such characteristics contribute to a fish population growth and turn in high fish catch. 
+
