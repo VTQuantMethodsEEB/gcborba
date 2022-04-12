@@ -10,7 +10,7 @@ str(catdat)
 #Distribution would be Gamma or negative binomial
 #H = the fish catch is significantly different for boat length and river sites.
 
-#round my catch values - inflated model, consider binomial or gamma with Tweedie Distribution
+#round my catch values - inflated model
 catdat$catch1 <- round(catdat$catch) #considering counting values - rounded catch
 
 mod.glm = glm.nb(catch1~length+river, data=catdat,control = glm.control(maxit = 50))
