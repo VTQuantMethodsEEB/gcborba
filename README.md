@@ -115,3 +115,37 @@ The Amazon river boats is my intercept. The output shows that fish catch depends
 
 Fish catch from Amazon river tens to be higher than others tributary rivers, the Negro river has the lowest catch and it would be related to physical-chemical characteristics from the water. The Negro River is categorized as a black waters river, which means poor nutrient and highly acidic waters. All the other rivers are white water rivers with nutrient and sediment rich, such characteristics contribute to a fish population growth and turn in high fish catch. 
 
+## WEEK 10##
+CODE : Week11_GabrielBorba.R
+
+DATA: catch.csv
+
+I did a GLM model with negative binomial family based on the residual distribution that I got from last week.
+
+H = the fish catch is significantly different for boat length and river sites.
+
+My catch variable is fish catch/kg, so I rounded my catch values to get integer values. 
+
+#Explain what the R output is telling you about your data, in relation to your hypothesis.
+
+
+#Explanation =
+The fish catch seems to be significant related to the boat length and the river site which was caugth.As my river variable is categorical, my Amazonas river sites where set as intercept. The fish catch from Amazonas river seen to depend on the boat length, and this relationship is significant different when comparing with the others rivers.   
+
+Then, I plot my observed data and predict data overlap to see if they fits approprally. 
+I used predict function to see if my observed data fits well with predict values.
+
+
+## WEEK 11##
+
+CODE : Week11_GabrielBorba.R
+
+DATA: catch.csv
+
+I did a GLM model with negative binomial family based on the residual distribution that I got from last week.  
+For likelihood ratio tests, I used 3 models from my data: a null model (catch~1); an additive model (catch~length+river) and an interactive model (catch~length*river). 
+
+For a model selection approach, I choose to use cross-validation function from the package caret. First, I set up the number of folds for cross-validation by defining the training control. I chose 10 folds, 
+
+I used my two models, one additive and another interactive 
+My model 1 accounts for 0.07% of the variance (R-squared = 0.0007) in catch scores.
