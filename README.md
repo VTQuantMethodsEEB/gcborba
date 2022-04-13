@@ -132,7 +132,7 @@ My catch variable is fish catch/kg, so I rounded my catch values to get integer 
 #Explanation =
 The fish catch seems to be significant related to the boat length and the river site which was caugth.As my river variable is categorical, my Amazonas river sites where set as intercept. The fish catch from Amazonas river seen to depend on the boat length, and this relationship is significant different when comparing with the others rivers.   
 
-Then, I plot my observed data and predict data overlap to see if they fits approprally. 
+Then, I plot my observed data and predict data overlap to see if they fits appropriately. 
 I used predict function to see if my observed data fits well with predict values.
 
 
@@ -144,6 +144,10 @@ DATA: catch.csv
 
 I did a GLM model with negative binomial family based on the residual distribution that I got from last week.  
 For likelihood ratio tests, I used 3 models from my data: a null model (catch~1); an additive model (catch~length+river) and an interactive model (catch~length*river). 
+
+The results show 
+
+
 
 For a model selection approach, I choose to use cross-validation function from the package caret. First, I set up the number of folds for cross-validation by defining the training control. I chose 10 folds, 
 
