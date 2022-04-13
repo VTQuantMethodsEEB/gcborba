@@ -3,7 +3,7 @@ library(MASS)
 library(ggplot2)
 #using the catch data - read
 catdat=read.csv("catch.csv") 
-str(catdat)
+catdat=na.omit(catdat)
 
 #Make a generalized linear model (preferably with more than one variable) for one of your hypotheses. Articulate which hypothesis you are testing.
 
@@ -21,27 +21,26 @@ summary(mod.glm)
 
 #Explanation = 
 #Plot your model (e.g. using predict) and overlay the model on top of the underlying data. Remember that you will need to use “type=response”.
-#make a new dataframe
-new.dat <- with(expand.grid(river=levels(catdat$river), 
-                            length=seq(min(catdat$length),max(catdat$length), by=1)))
 
+new.dat <- with(catdat,
+                expand.grid(river=levels(river), 
+                            length=seq(min(length),max(length), by=1)
+                            
+                ))
 #predict fish catch using new data frame
 new.dat$catch <- predict(mod.glm,newdata=new.dat)
 #What does this tell us?
-dat.new=expand.grid(date=seq(from = min(catdat$catch1),to = max(catdat$catch1),
-                             length.out = 100),
-                    river = unique(catdat$river))
-#GIVE HER AN ANSWER
+dat.new=expand.grid(length=seq(from = min(catdat$length),to = max(catdat$length),
+                             length.out = 100),river = unique(catdat$river))
 
 #much more sensible output
-dat.glm$ypred  = predict(mod.glm,type="response",newdata = dat.new)
+dat.new$ypred  = predict(mod.glm,type="response",newdata = dat.new)
 catdat$ypred1 = predict(mod.glm,type="response")
-head(dat.new)
 
-head(bat)
+
 
 plot1=ggplot(data=catdat,aes(x=length,y=catch1,color=river))+
-  geom_point(size=2,shape =1)
-  #+
-#geom_line(aes(x=date,y=yhat2,col = species))
+  geom_point(size=2,shape =1)+
+  geom_line(data=dat.new, aes(x=length,y=ypred,col = river)) +
+  geom_line(data=catdat,aes(x=length,y=ypred1,col = river))
 plot1
