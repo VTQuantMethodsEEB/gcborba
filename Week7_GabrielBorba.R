@@ -54,6 +54,7 @@ shapiro.test(sample(resid(mod), 500))#get normally by using a sample from my dat
 
 #Explain what these are telling you (it’s okay if they aren’t normal, but tell me why)___####
 
+#KL: where is the explanation here? 
 
 #Plot the relationship in ggplot using stat_smooth or stat_summary___####
 
@@ -103,3 +104,6 @@ x11()
 ggplot(new.dat,aes(x=length,y=log(catch),colour=river))+ 
   geom_line(aes(group=river))+ 
   geom_point(data=catdat, aes(x=length,y=log(catch),colour = river)) 
+
+
+#where is the additive model plot? 
