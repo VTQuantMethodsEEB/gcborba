@@ -171,7 +171,8 @@ After ran each model structure, I checked model has the best weight based on dAI
 #Extra
 #cross-validation
 
-For a model selection approach, I choose to use cross-validation function from the package caret. First, I set up the number of folds for cross-validation by defining the training control. I chose 10 folds, which means divide data into ten parts, and using model to predict the remaining 10%. 
+For a model selection approach, I choose to use cross-validation function from the package caret. First, I set up the number of folds for cross-validation by defining the training control. 
+I chose 10 folds, which means divide data into ten parts, and using model to predict the remaining 10%. 
 
 I used my two models, one additive (model 1) and another interactive (model2). My model 1 accounts for 0.07% of the variance (R-squared = 0.0007) in catch scores.
 
