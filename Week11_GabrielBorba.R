@@ -80,30 +80,17 @@ mod_2_caret
 #0.0003856321
 #sd(mod_1_caret$resample$Rsquared)
 #0.0006616286
+
+#AIC selection model
 n1 = glm.nb(catch1~length,data = catdat)
 n2 = glm.nb(catch1~river,data = catdat)
 n3 = glm.nb(catch1~length+river,data = catdat)
 n4 = glm.nb(catch1~length*river,data = catdat)
 summary(n4)
+n5 = glm.nb(catch1~1,data = catdat)
 #for AICc
 n=nrow(catdat)#or whatever the length of your df is
-tabA = AIC(n1,n2,n3,n4)
-#it would be nice to have AICC for a dataset this small
-tabA$k<-c(n1$rank,n2$rank,n3$rank,n4$rank)
-tabA$aiccs<-tabA$AIC+((2*tabA$k*(tabA$k+1))/(n-tabA$k-1))
-#now order from smallest to biggest
-tabA=tabA[order(tabA$aiccs),]
-#calculate delta AIC
-tabA$dAIC = tabA$aiccs - min(tabA$aiccs)
-#you use the next two lines to get weights
-tabA$edel<-exp(-0.5*tabA$dAIC) 
-tabA$wt<-tabA$edel/sum(tabA$edel)
-tabA
 
-#what issue do we have here?
-n5 = glm.nb(catch1~1,data = catdat)
-
-#now run this all again with n5!
 tabA = AIC(n1,n2,n3,n4,n5)
 #it would be nice to have AICC for a dataset this small
 tabA$k<-c(n1$rank,n2$rank,n3$rank,n4$rank,n5$rank)

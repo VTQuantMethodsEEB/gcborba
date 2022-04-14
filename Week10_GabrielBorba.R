@@ -37,10 +37,14 @@ dat.new=expand.grid(length=seq(from = min(catdat$length),to = max(catdat$length)
 dat.new$ypred  = predict(mod.glm,type="response",newdata = dat.new)
 catdat$ypred1 = predict(mod.glm,type="response")
 
+#setting my own theme 
 
 
-plot1=ggplot(data=catdat,aes(x=length,y=catch1,color=river))+
-  geom_point(size=2,shape =1)+
-  geom_line(data=dat.new, aes(x=length,y=ypred,col = river)) +
-  geom_line(data=catdat,aes(x=length,y=ypred1,col = river))
-plot1
+plot1=ggplot(data=catdat,aes(x=length,y=log(catch1),color=river))+
+  geom_point(size=2,shape =1)+ylab("Catch (kg)")+xlab("Boat length (m)")+
+  geom_line(data=dat.new, aes(x=length,y=log(ypred),col = river)) +
+  geom_line(data=catdat,aes(x=length,y=log(ypred1),col = river))
+plot1+theme_bw()
+  
+  
+  
