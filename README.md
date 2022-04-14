@@ -168,7 +168,7 @@ n5 = catch~1
 
 After ran each model structure, I checked model has the best weight based on dAIC. The interactive model (n4) showed the high weight and lower dAIC from the rank selection against the other model structures. 
 
-#cross-validation 
+#cross-validation (extra)
 
 For a model selection approach, I choose to use cross-validation function from the package caret. First, I set up the number of folds for cross-validation by defining the training control. I chose 10 folds, which means divide data into ten parts, and using model to predict the remaining 10%. 
 
