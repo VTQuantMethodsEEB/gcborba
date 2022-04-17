@@ -176,3 +176,16 @@ I chose 10 folds, which means divide data into ten parts, and using model to pre
 
 I used my two models, one additive (model 1) and another interactive (model2). My model 1 accounts for 0.07% of the variance (R-squared = 0.0007) in catch scores.
 
+## WEEK 12##
+
+CODE : Week12_GabrielBorba.R
+
+DATA: catch.csv
+
+For this mixed model, I get the hypothesis that fish catch depends on interaction between boat length and effort over river sites, taking account and controlling the distribution of my boat id. 
+
+For this mixed model, I get the hypothesis that fish catch depends on interaction between boat length and effort, taking account and controlling the distribution of river sites. 
+
+I used, as previous weeks, a generalized linear model with a negative binomial distribution. 
+
+Explanation:
