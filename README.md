@@ -182,10 +182,10 @@ CODE : Week12_GabrielBorba.R
 
 DATA: catch.csv
 
-For this mixed model, I get the hypothesis that fish catch depends on interaction between boat length and effort over river sites, taking account and controlling the distribution of my boat id. 
+For this mixed model, I get the hypothesis that fish catch depends on interaction between boat length and effort over river sites, taking account and controlling the distribution of my boat identification. 
 
-For this mixed model, I get the hypothesis that fish catch depends on interaction between boat length and effort, taking account and controlling the distribution of river sites. 
 
 I used, as previous weeks, a generalized linear model with a negative binomial distribution. 
 
 Explanation:
+Fish catch is significantly related to boat length and fishing effort. 
