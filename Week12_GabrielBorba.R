@@ -18,6 +18,7 @@ summary(m.nb)
 cat.scaled <- as.data.frame(scale(catdat[,c(5,10)]))
 catdat1<- scale(catdat)
 catdat$effort1 <- scale(effort)
+
 #look at mixed model
 summary(m.nb)
 
