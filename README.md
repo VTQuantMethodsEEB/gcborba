@@ -182,10 +182,10 @@ CODE : Week12_GabrielBorba.R
 
 DATA: catch.csv
 
-For this mixed model, I get the hypothesis that fish catch depends on interaction between boat length and effort over river sites, taking account and controlling the distribution of my boat identification. Boats are considered as repeated samples units over time. So, I do include this explained variation in my model and make sure that it not influencing in my model output. 
+For this mixed model, I get the hypothesis that fish catch depends on interaction between boat length and effort among river sites, taking account and controlling the distribution of my boat identification. Boats are considered as repeated samples units over time. So, I do include this explained variation in my model and make sure that it not influencing in my model output. 
 
 
-I used, as previous weeks, a generalized linear model with a negative binomial distribution. 
+I used, as previous weeks, a generalized linear model with a negative binomial distribution by using the package glmmTMB. 
 
 Explanation:
-Fish catch is significantly related to boat length and fishing effort
+Fish catch depends on the interaction between boat length and effort among river sites. The interaction between boat length and effort significantly affected the amount of fish caught. Catch from Amazon River has a significant difference compared to the Negro River, showing a higher catch. 
